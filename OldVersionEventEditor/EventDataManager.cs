@@ -89,7 +89,7 @@ namespace OldVersionEventEditor
             {
                 Directory.CreateDirectory(outputPath);
             }
-            File.WriteAllText(outputPath,sb.ToString(),Encoding.UTF8);
+            File.WriteAllText(outputFile,sb.ToString(),Encoding.UTF8);
         }
     }
 }

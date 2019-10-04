@@ -21,13 +21,15 @@ namespace OldVersionEventEditor
 
         public void Init()
         {
-            eventTC.Enabled = false;
+            saveTsmi.Enabled =
+               eventTC.Enabled = false;
             EventDataManager.Instance.OnFileLoaded += OnFileLoaded;
         }
 
         public void OnFileLoaded()
         {
             eventTC.Enabled = true;
+            saveTsmi.Enabled = true;
             RefreshEventList();
             RefreshChoiceList();
         }
@@ -49,7 +51,7 @@ namespace OldVersionEventEditor
 
         private void saveTsmi_Click(object sender, EventArgs e)
         {
-
+            EventDataManager.Instance.OutPutData();
         }
 
         private void 关于ToolStripMenuItem_Click(object sender, EventArgs e)
