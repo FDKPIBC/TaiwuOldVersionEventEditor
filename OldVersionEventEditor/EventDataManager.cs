@@ -77,6 +77,16 @@ namespace OldVersionEventEditor
         {
             var sb = new StringBuilder();
             sb.AppendLine(_fileHeader);
+            if (EventDatas.GroupBy(t=>t.Id).Any(t=>t.Count() > 1))
+            {
+                MessageBox.Show("事件存在重复Id!");
+                return;
+            }
+            if (ChoiceDatas.GroupBy(t => t.Id).Any(t => t.Count() > 1))
+            {
+                MessageBox.Show("选项存在重复Id!");
+                return;
+            }
             foreach (var eventData in EventDatas)
             {
                 sb.AppendLine(eventData.ToLine());

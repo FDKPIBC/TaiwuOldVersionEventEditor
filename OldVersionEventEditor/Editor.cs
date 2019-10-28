@@ -54,11 +54,6 @@ namespace OldVersionEventEditor
             EventDataManager.Instance.OutPutData();
         }
 
-        private void 关于ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            new About().ShowDialog();
-        }
-
         private void tbxSearchEvent_TextChanged(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(tbxSearchEvent.Text))
@@ -106,6 +101,7 @@ namespace OldVersionEventEditor
             if (lbChoice.SelectedIndex < 0) return;
             ChoicePG.Enabled = true;
             ChoicePG.SelectedObject = lbChoice.SelectedItem;
+            choiceIndex = lbChoice.SelectedIndex;
         }
 
         public void RefreshChoiceList(string name = "")
@@ -132,6 +128,10 @@ namespace OldVersionEventEditor
             //lbEvent.DisplayMember = "Name";
         }
 
+        private int eventIndex = -1;
+
+        private int choiceIndex = -1;
+
         private void btnAddEvent_Click(object sender, EventArgs e)
         {
             var newEventData = new EventData();
@@ -156,6 +156,33 @@ namespace OldVersionEventEditor
             if (lbChoice.SelectedIndex < 0) return;
             EventPG.Enabled = true;
             EventPG.SelectedObject = lbEvent.SelectedItem;
+            eventIndex = lbEvent.SelectedIndex;
+        }
+
+        private void btnRefreshEvent_Click(object sender, EventArgs e)
+        {
+            RefreshEventList(tbxSearchEvent.Text);
+            //lbEvent.SelectedIndex = -1;
+            lbEvent.SelectedIndex = eventIndex;
+            //EventPG.SelectedObject = null;
+        }
+
+        private void btnRefreshChoice_Click(object sender, EventArgs e)
+        {
+            RefreshChoiceList(tbxSearchChoice.Text);
+            //lbChoice.SelectedIndex = -1;
+            lbChoice.SelectedIndex = choiceIndex;
+            //ChoicePG.SelectedObject = null;
+        }
+
+        private void tsmiAboutEditor_Click(object sender, EventArgs e)
+        {
+            new About().ShowDialog();
+        }
+
+        private void tsmiAboutConfig_Click(object sender, EventArgs e)
+        {
+            new AboutConfig().Show();
         }
     }
 }
