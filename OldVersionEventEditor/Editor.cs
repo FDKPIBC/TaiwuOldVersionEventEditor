@@ -142,9 +142,9 @@ namespace OldVersionEventEditor
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
-            if (lbChoice.SelectedIndex < 0) return;
+            if (lbEvent.SelectedIndex < 0) return;
             var eventData = EventPG.SelectedObject as EventData;
-            EventDataManager.Instance.ChoiceDatas.Remove(eventData);
+            EventDataManager.Instance.EventDatas.Remove(eventData);
             EventPG.SelectedObject = null;
             EventPG.Enabled = false;
             lbEvent.SelectedIndex = -1;

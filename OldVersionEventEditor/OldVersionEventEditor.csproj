@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>OldVersionEventEditor</RootNamespace>
     <AssemblyName>OldVersionEventEditor</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -41,6 +41,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Assest\Image\Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -118,6 +121,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assest\Image\add.png" />
+    <Content Include="Assest\Image\Default.png" />
+    <Content Include="Assest\Image\Icon.ico" />
     <Content Include="Assest\Image\refresh.png" />
     <Content Include="Assest\Image\remove.png" />
     <Content Include="Config.txt">

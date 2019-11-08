@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Editor));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.文件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newTsmi = new System.Windows.Forms.ToolStripMenuItem();
@@ -158,14 +159,14 @@
             // tsmiAboutEditor
             // 
             this.tsmiAboutEditor.Name = "tsmiAboutEditor";
-            this.tsmiAboutEditor.Size = new System.Drawing.Size(180, 22);
+            this.tsmiAboutEditor.Size = new System.Drawing.Size(136, 22);
             this.tsmiAboutEditor.Text = "关于编辑器";
             this.tsmiAboutEditor.Click += new System.EventHandler(this.tsmiAboutEditor_Click);
             // 
             // tsmiAboutConfig
             // 
             this.tsmiAboutConfig.Name = "tsmiAboutConfig";
-            this.tsmiAboutConfig.Size = new System.Drawing.Size(180, 22);
+            this.tsmiAboutConfig.Size = new System.Drawing.Size(136, 22);
             this.tsmiAboutConfig.Text = "关于配置";
             this.tsmiAboutConfig.Click += new System.EventHandler(this.tsmiAboutConfig_Click);
             // 
@@ -390,6 +391,7 @@
             this.Controls.Add(this.eventTC);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Editor";
             this.Text = "事件编辑器(支持v2.6.x)";
