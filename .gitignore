@@ -3,3 +3,6 @@
 ################################################################################
 
 /.vs
+/OldVersionEventEditor/bin/Debug
+/OldVersionEventEditor/obj
+/OldVersionEventEditor/bin/Release

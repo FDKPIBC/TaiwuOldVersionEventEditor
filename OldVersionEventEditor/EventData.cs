@@ -61,28 +61,28 @@ namespace OldVersionEventEditor
         /// 选项
         /// </summary>
         [DisplayName("选项")]
-        [Category("事件")]
+        [Category("事件配置")]
         public string[] Choices { get; set; }
 
         /// <summary>
         /// 显示遮罩
         /// </summary>
         [DisplayName("是否开始遮罩")]
-        [Category("事件")]
+        [Category("事件配置")]
         public bool ShowMask { get; set; }
 
         /// <summary>
         /// 结束遮罩
         /// </summary>
         [DisplayName("是否结束遮罩")]
-        [Category("事件")]
+        [Category("事件配置")]
         public bool EndMask { get; set; }
 
         /// <summary>
         /// 是否是输入事件
         /// </summary>
         [DisplayName("是否显示输入框")]
-        [Category("事件")]
+        [Category("事件配置")]
         public bool IsInput { get; set; }
 
         #endregion
@@ -93,21 +93,21 @@ namespace OldVersionEventEditor
         /// 选项创建时的规则
         /// </summary>
         [DisplayName("创建规则")]
-        [Category("选项")]
+        [Category("选项配置")]
         public string[] CreateCondition { get; set; }
 
         /// <summary>
         /// 下一个事件Id
         /// </summary>
         [DisplayName("下一个事件Id")]
-        [Category("选项")]
+        [Category("选项配置")]
         public string NextEventId { get; set; }
 
         /// <summary>
         /// 选项点击触发
         /// </summary>
         [DisplayName("选项点击")]
-        [Category("选项")]
+        [Category("选项配置")]
         public string[] ChoiceClick { get; set; }
 
         #endregion
@@ -127,7 +127,7 @@ namespace OldVersionEventEditor
             stringArray[1] = Name;
             stringArray[2] = BackgroundImageType.ToString();
             stringArray[3] = EventActorId.ToString();
-            stringArray[4] = Text;
+            stringArray[4] = Text.ReplaceToChineseFormat();
             stringArray[5] = string.Join("|", DataTypes);
             stringArray[6] = string.Join("|", Choices);
             stringArray[7] = string.Join("|", CreateCondition);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Editor));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.文件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newTsmi = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,13 +43,13 @@
             this.btnAddEvent = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
             this.lbEvent = new System.Windows.Forms.ListBox();
+            this.tbxSearchEvent = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.ChoicePG = new System.Windows.Forms.PropertyGrid();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnAddChoice = new System.Windows.Forms.Button();
             this.btnRemoveChoice = new System.Windows.Forms.Button();
             this.lbChoice = new System.Windows.Forms.ListBox();
-            this.tbxSearchEvent = new System.Windows.Forms.TextBox();
             this.tbxSearchChoice = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.eventTC.SuspendLayout();
@@ -65,7 +66,7 @@
             this.关于ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(701, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(530, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -118,7 +119,7 @@
             this.EventPG.Dock = System.Windows.Forms.DockStyle.Fill;
             this.EventPG.Location = new System.Drawing.Point(203, 3);
             this.EventPG.Name = "EventPG";
-            this.EventPG.Size = new System.Drawing.Size(487, 489);
+            this.EventPG.Size = new System.Drawing.Size(316, 312);
             this.EventPG.TabIndex = 1;
             // 
             // eventTC
@@ -129,7 +130,7 @@
             this.eventTC.Location = new System.Drawing.Point(0, 25);
             this.eventTC.Name = "eventTC";
             this.eventTC.SelectedIndex = 0;
-            this.eventTC.Size = new System.Drawing.Size(701, 521);
+            this.eventTC.Size = new System.Drawing.Size(530, 344);
             this.eventTC.TabIndex = 2;
             // 
             // tabPage1
@@ -139,7 +140,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(693, 495);
+            this.tabPage1.Size = new System.Drawing.Size(522, 318);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "事件";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -160,7 +161,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 489);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 312);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // btnAddEvent
@@ -193,9 +194,19 @@
             this.lbEvent.ItemHeight = 12;
             this.lbEvent.Location = new System.Drawing.Point(3, 68);
             this.lbEvent.Name = "lbEvent";
-            this.lbEvent.Size = new System.Drawing.Size(194, 418);
+            this.lbEvent.Size = new System.Drawing.Size(194, 241);
             this.lbEvent.TabIndex = 2;
             this.lbEvent.SelectedIndexChanged += new System.EventHandler(this.lbEvent_SelectedIndexChanged);
+            // 
+            // tbxSearchEvent
+            // 
+            this.tbxSearchEvent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.SetColumnSpan(this.tbxSearchEvent, 3);
+            this.tbxSearchEvent.Location = new System.Drawing.Point(3, 39);
+            this.tbxSearchEvent.Name = "tbxSearchEvent";
+            this.tbxSearchEvent.Size = new System.Drawing.Size(194, 21);
+            this.tbxSearchEvent.TabIndex = 3;
+            this.tbxSearchEvent.TextChanged += new System.EventHandler(this.tbxSearchEvent_TextChanged);
             // 
             // tabPage2
             // 
@@ -204,7 +215,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(634, 355);
+            this.tabPage2.Size = new System.Drawing.Size(693, 495);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "选项";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -214,7 +225,7 @@
             this.ChoicePG.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ChoicePG.Location = new System.Drawing.Point(203, 3);
             this.ChoicePG.Name = "ChoicePG";
-            this.ChoicePG.Size = new System.Drawing.Size(428, 349);
+            this.ChoicePG.Size = new System.Drawing.Size(487, 489);
             this.ChoicePG.TabIndex = 3;
             // 
             // tableLayoutPanel2
@@ -233,7 +244,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(200, 349);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(200, 489);
             this.tableLayoutPanel2.TabIndex = 4;
             // 
             // btnAddChoice
@@ -266,19 +277,9 @@
             this.lbChoice.ItemHeight = 12;
             this.lbChoice.Location = new System.Drawing.Point(3, 68);
             this.lbChoice.Name = "lbChoice";
-            this.lbChoice.Size = new System.Drawing.Size(194, 278);
+            this.lbChoice.Size = new System.Drawing.Size(194, 418);
             this.lbChoice.TabIndex = 2;
             this.lbChoice.SelectedIndexChanged += new System.EventHandler(this.lbChoice_SelectedIndexChanged);
-            // 
-            // tbxSearchEvent
-            // 
-            this.tbxSearchEvent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.SetColumnSpan(this.tbxSearchEvent, 3);
-            this.tbxSearchEvent.Location = new System.Drawing.Point(3, 39);
-            this.tbxSearchEvent.Name = "tbxSearchEvent";
-            this.tbxSearchEvent.Size = new System.Drawing.Size(194, 21);
-            this.tbxSearchEvent.TabIndex = 3;
-            this.tbxSearchEvent.TextChanged += new System.EventHandler(this.tbxSearchEvent_TextChanged);
             // 
             // tbxSearchChoice
             // 
@@ -294,10 +295,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(701, 546);
+            this.ClientSize = new System.Drawing.Size(530, 369);
             this.Controls.Add(this.eventTC);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Editor";
             this.Text = "事件编辑器(支持v2.6.x)";
