@@ -6,12 +6,19 @@ using System.Threading.Tasks;
 
 namespace OldVersionEventEditor
 {
-    public static class StringExtension 
+    /// <summary>
+    /// 字符串扩展类
+    /// </summary>
+    public static class StringExtension
     {
-        public static string ReplaceToChineseFormat(this string content)
+        /// <summary>
+        /// 字符串转int
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
+        public static int ToInt32(this string str)
         {
-            content = content.Replace(',', '，').Replace('.','。');
-            return content;
+            return int.Parse(str);
         }
     }
 }
