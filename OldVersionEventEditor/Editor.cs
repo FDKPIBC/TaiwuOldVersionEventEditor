@@ -32,6 +32,8 @@ namespace OldVersionEventEditor
             saveTsmi.Enabled = true;
             RefreshEventList();
             RefreshChoiceList();
+            ChoicePG.SelectedObject = null;
+            EventPG.SelectedObject = null;
         }
 
         private void newTsmi_Click(object sender, EventArgs e)
@@ -153,7 +155,7 @@ namespace OldVersionEventEditor
 
         private void lbEvent_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (lbChoice.SelectedIndex < 0) return;
+            if (lbEvent.SelectedIndex < 0) return;
             EventPG.Enabled = true;
             EventPG.SelectedObject = lbEvent.SelectedItem;
             eventIndex = lbEvent.SelectedIndex;
