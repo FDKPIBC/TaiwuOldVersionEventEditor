@@ -46,6 +46,9 @@
     <ApplicationIcon>Assest\Image\Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -71,6 +74,17 @@
     <Compile Include="AboutConfig.Designer.cs">
       <DependentUpon>AboutConfig.cs</DependentUpon>
     </Compile>
+    <Compile Include="CodeGenerate\CodeManager.cs" />
+    <Compile Include="CodeGenerate\CustomValue.cs" />
+    <Compile Include="CodeGenerate\ICodeBlock.cs" />
+    <Compile Include="CodeGenerate\MethodData.cs" />
+    <Compile Include="CodeGenerate\ModInfo.cs" />
+    <Compile Include="CodeGenerate\UI\CodeGenerateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodeGenerate\UI\CodeGenerateForm.Designer.cs">
+      <DependentUpon>CodeGenerateForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EventData.cs" />
     <Compile Include="EventDataAttribute.cs" />
     <Compile Include="Editor.cs">
@@ -89,6 +103,9 @@
     <EmbeddedResource Include="AboutConfig.resx">
       <DependentUpon>AboutConfig.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CodeGenerate\UI\CodeGenerateForm.resx">
+      <DependentUpon>CodeGenerateForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Editor.resx">
       <DependentUpon>Editor.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,6 +119,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -125,6 +143,7 @@
     <Content Include="Assest\Image\Icon.ico" />
     <Content Include="Assest\Image\refresh.png" />
     <Content Include="Assest\Image\remove.png" />
+    <Content Include="CodeGenerate\BaseTemplate.txt" />
     <Content Include="Config.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
