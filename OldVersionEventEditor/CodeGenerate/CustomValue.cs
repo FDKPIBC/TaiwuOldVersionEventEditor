@@ -25,9 +25,9 @@ namespace OldVersionEventEditor.CodeGenerate
                 {
                     throw new Exception("数据无效,类型为空!");
                 }
-                if (value.GetType() == ValueType || ValueType.IsSubclassOf(value.GetType()) || ValueType.GetType().IsSubclassOf(ValueType))
+                if (value.GetType() == ValueType && ( value.GetType().IsValueType || value.GetType().IsArray ))
                 {
-                    
+                    _value = value;
                 }
             }
         }

@@ -74,9 +74,11 @@
     <Compile Include="AboutConfig.Designer.cs">
       <DependentUpon>AboutConfig.cs</DependentUpon>
     </Compile>
+    <Compile Include="CodeGenerate\CodeBlock\ConditionBlock.cs" />
     <Compile Include="CodeGenerate\CodeManager.cs" />
     <Compile Include="CodeGenerate\CustomValue.cs" />
-    <Compile Include="CodeGenerate\ICodeBlock.cs" />
+    <Compile Include="CodeGenerate\CodeBlock\ICodeBlock.cs" />
+    <Compile Include="CodeGenerate\ExportableAttribute.cs" />
     <Compile Include="CodeGenerate\MethodData.cs" />
     <Compile Include="CodeGenerate\ModInfo.cs" />
     <Compile Include="CodeGenerate\UI\CodeGenerateForm.cs">
@@ -143,7 +145,9 @@
     <Content Include="Assest\Image\Icon.ico" />
     <Content Include="Assest\Image\refresh.png" />
     <Content Include="Assest\Image\remove.png" />
-    <Content Include="CodeGenerate\BaseTemplate.txt" />
+    <Content Include="CodeGenerate\Template\BaseTemplate.txt" />
+    <Content Include="CodeGenerate\Template\EventHandlerTemplate.txt" />
+    <Content Include="CodeGenerate\Template\InfoTemplate.txt" />
     <Content Include="Config.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

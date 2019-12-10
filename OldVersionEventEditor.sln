@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29326.143
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OldVersionEventEditor", "OldVersionEventEditor\OldVersionEventEditor.csproj", "{4D5FC08B-ACC4-4BFF-AA9F-F8F3706CE87B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaiwuMethodExport", "TaiwuMethodExport\TaiwuMethodExport.csproj", "{B73A3948-0BC0-4D4B-AB90-B4D08F76AC3F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4D5FC08B-ACC4-4BFF-AA9F-F8F3706CE87B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D5FC08B-ACC4-4BFF-AA9F-F8F3706CE87B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D5FC08B-ACC4-4BFF-AA9F-F8F3706CE87B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B73A3948-0BC0-4D4B-AB90-B4D08F76AC3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B73A3948-0BC0-4D4B-AB90-B4D08F76AC3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B73A3948-0BC0-4D4B-AB90-B4D08F76AC3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B73A3948-0BC0-4D4B-AB90-B4D08F76AC3F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

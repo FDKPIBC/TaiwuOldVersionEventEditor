@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OldVersionEventEditor.CodeGenerate
+﻿namespace OldVersionEventEditor.CodeGenerate.CodeBlock
 {
     public interface ICodeBlock
     {
@@ -17,7 +11,5 @@ namespace OldVersionEventEditor.CodeGenerate
         /// 名称
         /// </summary>
         string Name { get; set; }
-
-        
     }
 }
