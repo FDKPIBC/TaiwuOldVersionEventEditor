@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace OldVersionEventEditor.CodeGenerate
 {
+    /// <summary>
+    /// 不可导出
+    /// </summary>
     [AttributeUsage(AttributeTargets.All)]
-    public class ExportableAttribute : Attribute
+    public class ExportDisableAttribute : Attribute
     {
 
     }

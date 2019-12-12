@@ -8,6 +8,6 @@ namespace OldVersionEventEditor.CodeGenerate
 {
     public class CodeManager
     {
-
+        public 
     }
 }

@@ -9,6 +9,10 @@ namespace {nameSpace}
         public void Init(EventMethodManager baseManager)
         {
             Debug.Log("初始化完成!");
+
+			{registerCode}
         }
+
+		{methodBody}
     }
 }

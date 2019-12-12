@@ -75,12 +75,17 @@
       <DependentUpon>AboutConfig.cs</DependentUpon>
     </Compile>
     <Compile Include="CodeGenerate\CodeBlock\ConditionBlock.cs" />
+    <Compile Include="CodeGenerate\CodeBlock\Operation\Foreach.cs" />
+    <Compile Include="CodeGenerate\CodeBlock\Operation\MethodCall.cs" />
+    <Compile Include="CodeGenerate\CodeBlock\Operation\OperationBlock.cs" />
+    <Compile Include="CodeGenerate\CodeBlock\Operation\Variable.cs" />
     <Compile Include="CodeGenerate\CodeManager.cs" />
     <Compile Include="CodeGenerate\CustomValue.cs" />
     <Compile Include="CodeGenerate\CodeBlock\ICodeBlock.cs" />
     <Compile Include="CodeGenerate\ExportableAttribute.cs" />
     <Compile Include="CodeGenerate\MethodData.cs" />
     <Compile Include="CodeGenerate\ModInfo.cs" />
+    <Compile Include="CodeGenerate\TemplateConst.cs" />
     <Compile Include="CodeGenerate\UI\CodeGenerateForm.cs">
       <SubType>Form</SubType>
     </Compile>

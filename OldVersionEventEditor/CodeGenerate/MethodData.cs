@@ -13,14 +13,14 @@ namespace OldVersionEventEditor.CodeGenerate
     public class MethodData
     {
         /// <summary>
-        /// 请求参数类型数组
+        /// 请求参数类型数组(AssemblyQualifiedName)
         /// </summary>
-        public Type[] RequireParameters { get; set; }
+        public string[] RequireParameters { get; set; }
 
         /// <summary>
-        /// 返回类型
+        /// 返回类型(AssemblyQualifiedName)
         /// </summary>
-        public Type Return { get; set; }
+        public string Return { get; set; }
 
         /// <summary>
         /// 方法名
@@ -44,8 +44,8 @@ namespace OldVersionEventEditor.CodeGenerate
 
         public MethodData(MethodInfo info)
         {
-            Return = info.ReturnType;
-            RequireParameters = info.GetParameters().Select(t=>t.ParameterType).ToArray();
+            Return = info.ReturnType.AssemblyQualifiedName;
+            RequireParameters = info.GetParameters().Select(t=>t.ParameterType.AssemblyQualifiedName).ToArray();
             Name = info.Name;
             if (info.DeclaringType != null)
             {

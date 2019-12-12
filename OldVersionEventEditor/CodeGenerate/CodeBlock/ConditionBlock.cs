@@ -11,7 +11,6 @@ namespace OldVersionEventEditor.CodeGenerate.CodeBlock
         public string Id { get; set; }
 
         public string Name { get; set; }
-
-        public List<ICodeBlock> CodeBlocks { get; set; }
+        public string Description { get; set; }
     }
 }
