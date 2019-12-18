@@ -53,6 +53,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CodeGenerate\CodeGenerate.csproj">
+      <Project>{31dd19ec-512e-488c-912f-c9e096b20133}</Project>
+      <Name>CodeGenerate</Name>
+    </ProjectReference>
     <ProjectReference Include="..\OldVersionEventEditor\OldVersionEventEditor.csproj">
       <Project>{4D5FC08B-ACC4-4BFF-AA9F-F8F3706CE87B}</Project>
       <Name>OldVersionEventEditor</Name>

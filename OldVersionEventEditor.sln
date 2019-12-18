@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OldVersionEventEditor", "Ol
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaiwuMethodExport", "TaiwuMethodExport\TaiwuMethodExport.csproj", "{B73A3948-0BC0-4D4B-AB90-B4D08F76AC3F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeGenerate", "CodeGenerate\CodeGenerate.csproj", "{31DD19EC-512E-488C-912F-C9E096B20133}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B73A3948-0BC0-4D4B-AB90-B4D08F76AC3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B73A3948-0BC0-4D4B-AB90-B4D08F76AC3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B73A3948-0BC0-4D4B-AB90-B4D08F76AC3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31DD19EC-512E-488C-912F-C9E096B20133}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31DD19EC-512E-488C-912F-C9E096B20133}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31DD19EC-512E-488C-912F-C9E096B20133}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31DD19EC-512E-488C-912F-C9E096B20133}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

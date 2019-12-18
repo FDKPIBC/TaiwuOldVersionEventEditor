@@ -1,9 +1,0 @@
-﻿{
-  "Id": "{nameSpace}",
-  "DisplayName": "{displayName}",
-  "Description":"{description}",
-  "Author": "{author}",
-  "Version": "{version}",
-  "AssemblyName": "{assemblyName}",
-  "EntryMethod": "{nameSpace}.Main.Load"
-}
